@@ -7,15 +7,15 @@
   <style name="SearchResult" foreground="#000000" background="#ffef0b"/>
   <style name="SearchScope" foreground="#000000" background="#f5faff"/>
   <style name="Parentheses" foreground="#ff0000" background="#b4eeb4"/>
-  <style name="CurrentLine" foreground="#000000" background="#c2e1ff"/>
+  <style name="CurrentLine" foreground="#aa007f" background="#0055ff"/>
   <style name="CurrentLineNumber" foreground="#808080" bold="true"/>
-  <style name="Occurrences" foreground="#ff55ff" background="#ffaaff"/>
+  <style name="Occurrences" background="#ff0000"/>
   <style name="Occurrences.Unused" foreground="#808000"/>
   <style name="Occurrences.Rename" foreground="#000000" background="#ff6464"/>
   <style name="Number" foreground="#000080"/>
   <style name="String" foreground="#008000"/>
   <style name="Type" foreground="#00aa00"/>
-  <style name="Local" foreground="#000000" bold="true" italic="true"/>
+  <style name="Local" foreground="#005500" bold="true" italic="true"/>
   <style name="Field" foreground="#800000"/>
   <style name="Static" foreground="#800080"/>
   <style name="VirtualMethod" foreground="#55557f" italic="true"/>

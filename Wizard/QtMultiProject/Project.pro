@@ -1,6 +1,6 @@
 TEMPLATE = subdirs
 
-SUBDIRS += %ProjectSubDir%
+SUBDIRS += Project
 
 OTHER_FILES += SettingConfig.pri  \
     Setting/*.pri \

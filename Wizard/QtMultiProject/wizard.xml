@@ -22,7 +22,7 @@
     		</field>
     		<field mandatory="true" name="ProjectSubPro">
     				<fieldcontrol class="QLineEdit" validator='^[^"]+$'
-    											defaulttext="%ProjectSubDir%" placeholdertext="Please enter the name of the source code." />
+    											defaulttext="Project" placeholdertext="Please enter the name of the source code." />
     		</field>
     </fields>
 </wizard>

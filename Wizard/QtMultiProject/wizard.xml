@@ -14,5 +14,6 @@
     		<file source="Setting/LibraryConfig.pri" openeditor="false" />
     		<file source="Project/Project.pro" openproject="false" />
     		<file source="Setting/LibrarySetting/README" openeditor="false" />
+    		file source="Setting/LibrarySetting/VLD.pri" openeditor="false" />
     </files>
 </wizard>

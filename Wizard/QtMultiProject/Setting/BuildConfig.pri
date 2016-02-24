@@ -37,11 +37,20 @@ contains(TEMPLATE,lib) {
 	DESTDIR = $$PROJECT_LIB
 	DLLDESTDIR = $$PROJECT_BIN
     } else {
-	DESTDIR = $$PROJECT_BIN
-	QMAKE_RPATHDIR += $$PROJECT_BIN
+	DESTDIR = $$PROJECT_LIB
+	QMAKE_RPATHDIR += $$PROJECT_LIB
+	CONFIG += static
     }
 } else:contains(TEMPLATE,app) {
     DESTDIR = $$PROJECT_BIN
+    QMAKE_RPATHDIR += $$PROJECT_BIN
+}
+
+contains(TEMPLATE,lib) {
+    contains(CONFIG,static) {
+	DESTDIR = $$PROJECT_LIB
+	QMAKE_RPATHDIR += $$PROJECT_LIB
+    }
 }
 
 #编译器相关的配置

@@ -36,10 +36,13 @@ contains(TEMPLATE,lib) {
     win32 {
 	DESTDIR = $$PROJECT_LIB
 	DLLDESTDIR = $$PROJECT_BIN
-    } else {
+    } else:android {
 	DESTDIR = $$PROJECT_LIB
 	QMAKE_RPATHDIR += $$PROJECT_LIB
 	CONFIG += static
+    } else {
+	DESTDIR = $$PROJECT_BIN
+	QMAKE_RPATHDIR += $$PROJECT_LIB
     }
 } else:contains(TEMPLATE,app) {
     DESTDIR = $$PROJECT_BIN

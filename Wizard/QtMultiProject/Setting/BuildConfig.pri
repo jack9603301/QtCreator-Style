@@ -33,26 +33,27 @@ CONFIG(debug,debug|release) {
 #执行项目设置
 contains(TEMPLATE,lib) {
     #配置lib和bin路径，独立于Build编译路径
-    win32 {
-	DESTDIR = $$PROJECT_LIB
-	DLLDESTDIR = $$PROJECT_BIN
-    } else:android {
-	DESTDIR = $$PROJECT_LIB
-	QMAKE_RPATHDIR += $$PROJECT_LIB
-	CONFIG += static
+    contains(CONFIG,static)    {
+	win32 {
+	    DESTDIR = $$PROJECT_LIB
+	} else {
+	    QMAKE_RPATHDIR += $$PROJECT_LIB
+	}
     } else {
-	DESTDIR = $$PROJECT_BIN
-	PROJECT_LIB = $$PROJECT_BIN
+	win32 {
+	    DESTDIR = $$PROJECT_LIB
+	    DLLDESTDIR = $$PROJECT_BIN
+	} else {
+	    DESTDIR = $$PROJECT_BIN
+	    PROJECT_LIB = $$PROJECT_BIN
+	}
     }
 } else:contains(TEMPLATE,app) {
-    DESTDIR = $$PROJECT_BIN
-    QMAKE_RPATHDIR += $$PROJECT_BIN
-}
-
-contains(TEMPLATE,lib) {
-    contains(CONFIG,static) {
-	DESTDIR = $$PROJECT_LIB
-	QMAKE_RPATHDIR += $$PROJECT_LIB
+    win32  {
+	DESTDIR = $$PROJECT_BIN
+    } else {
+	QMAKE_RPATHDIR += $$PROJECT_BIN
+	PROJECT_LIB = $$PROJECT_BIN
     }
 }
 

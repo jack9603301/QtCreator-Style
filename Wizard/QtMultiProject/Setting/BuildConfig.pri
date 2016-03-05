@@ -42,7 +42,7 @@ contains(TEMPLATE,lib) {
 	CONFIG += static
     } else {
 	DESTDIR = $$PROJECT_BIN
-	QMAKE_RPATHDIR += $$PROJECT_LIB
+	PROJECT_LIB = $$PROJECT_BIN
     }
 } else:contains(TEMPLATE,app) {
     DESTDIR = $$PROJECT_BIN
